@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1><br><span>To-do List</span></h1>
+    <br>
+    <div id="app">
+        <input type="text" id="task" placeholder="Add a new task and press Enter" onkeydown="addTask(event)">
+    </div>
+    <div id="savedTasks">
+        <h3><span>Saved Tasks</span></h3>
+        <ul id="savedTaskList"></ul>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
