@@ -1,0 +1,91 @@
+body {
+  background-color: rgb(255, 233, 107);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Styling for the calculator */
+.calculator {
+  border: 3px solid #ccc; /* Increase border size for the outer edge */
+  border-radius: 10px; /* Add some border radius for rounded corners */
+  width: 320px; /* Adjust the width as needed */
+  padding: 5px; /* Add padding to the calculator */
+  background-color: silver;
+  outline: 2px solid rgb(46, 46, 48); /* Add an outline to the calculator */
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.8); /* Add a shadow for depth */
+  perspective: 1000px; /* Add a perspective for a 3D effect */
+}
+
+.display {
+  text-align: right;
+  padding: 10px;
+  background-color: silver;
+}
+
+/* Styling for the display */
+.display input {
+  text-align: right;
+  background-color: rgb(190, 212, 184);
+  width: 100%; /* Make the display 100% wide (as wide as the parent container) */
+  height: 100px; /* Increase the height of the display as needed */
+  font-size: 2.5em;
+  border-radius: 10px;
+}
+  
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2px;
+}
+
+/* Styling for the buttons with a 3D effect */
+button {
+  background-color: rgb(51, 51, 51);
+  color: white;
+  border: 1px solid #ccc;
+  font-size: 1.5em;
+  padding: 10px;
+  margin: 4px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); /* Add a 3D shadow effect */
+}
+
+button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover to simulate a press effect */
+  transform: translate(3px, 3px);
+}
+
+/* Styling for the "=" button (blue) */
+#calculate {
+  grid-column: span 2; 
+}
+
+/* Styling for the "C" button */
+button.clear {
+    background-color: #ff0000; /*Red background color*/
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+/* Style the "Basic Calculator" label */
+.calculator-label {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  font-size: 2.5em;
+  /* margin-top: 15px; Adjust the margin to control the spacing between the calculator and the label */
+  bottom: 0;
+  padding: 10px; /* Add padding for spacing */
+  position: absolute;
+}
+
+.calculator-label:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  color: rgb(255, 43, 61);
+}
